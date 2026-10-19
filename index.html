@@ -1,0 +1,654 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Jumyr M Moreno — Full-Stack Developer crafting clean, fast, thoughtful web experiences." />
+  <title>Jumyr M Moreno — Full-Stack Developer</title>
+
+  <script>
+    (function () {
+      const saved = localStorage.getItem('theme');
+      const sys = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', saved || sys);
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="scroll-bar" id="scrollBar" aria-hidden="true"></div>
+
+  <!-- NAV -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#hero" class="logo">Jumyr<span class="logo-dot">.</span></a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#work">Services</a></li>
+        <li><a href="#stack">Stack</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-right">
+        
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <a href="https://www.facebook.com/moreno.jum" target="_blank" rel="noopener" class="nav-cta">Let's talk</a>
+      </div>
+
+      <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <div class="page-wrap">
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <canvas class="hero-canvas" id="heroCanvas" aria-hidden="true"></canvas>
+
+      <div class="container hero-inner">
+
+        <!-- LEFT: content -->
+        <div class="hero-text">
+
+
+          <h1 class="hero-name">
+            <span class="hero-name-line">Crafting</span>
+            <span class="hero-name-line accent-line">
+              <span class="accent-text">Digital</span>
+              <span class="trend-arrow" aria-hidden="true">
+                <svg viewBox="0 0 80 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <polyline class="trend-line" points="4,48 22,34 38,40 56,18 72,8" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                  <polyline class="trend-head" points="60,6 72,8 70,20" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                  <circle class="trend-dot" cx="22" cy="34" r="3" fill="currentColor"/>
+                  <circle class="trend-dot" cx="56" cy="18" r="3" fill="currentColor"/>
+                  <circle class="trend-dot" cx="72" cy="8"  r="3.5" fill="currentColor"/>
+                </svg>
+              </span>
+            </span>
+            <span class="hero-name-line">Experiences.</span>
+          </h1>
+
+          <p class="hero-bio">
+            I'm <strong>Jumyr M. Moreno</strong>, a full-stack developer based in the Philippines.
+            I build fast, clean, and accessible applications using
+            <strong>JavaScript, React, C#, Python, Java &amp; PHP</strong> — backed by
+            <strong>MySQL, MongoDB, SQLite</strong> and deployed on <strong>AWS EC2</strong>.
+          </p>
+
+          <div class="hero-btns">
+            <a href="#projects" class="btn-primary">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              See my work
+            </a>
+            <a href="#contact" class="btn-secondary">
+              Get in touch
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-card">
+              <strong>2+</strong>
+              <span>Years exp.</span>
+            </div>
+            <div class="stat-card">
+              <strong>10+</strong>
+              <span>Projects</span>
+            </div>
+            <div class="stat-card">
+              <strong>100%</strong>
+              <span>Remote</span>
+            </div>
+            <div class="stat-card stat-card--stack">
+              <span class="stack-row">
+                <span class="stack-pill">C#</span>
+                <span class="stack-pill">JS</span>
+                <span class="stack-pill">Py</span>
+                <span class="stack-pill">React</span>
+              </span>
+              <span>Core stack</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: photo -->
+        <div class="photo-col">
+          <div class="photo-wrap">
+            <div class="photo-ring"></div>
+            <div class="photo-frame">
+              <img
+                src="assets/image.png"
+                alt="Jumyr M Moreno"
+                class="photo-img"
+                onerror="this.style.display='none';this.closest('.photo-frame').classList.add('empty')"
+              />
+              <div class="photo-placeholder" aria-hidden="true">JM</div>
+            </div>
+
+            <!-- Floating cards -->
+            <div class="float-card float-card--avail">
+              <span class="chip-dot"></span>
+              <div>
+                <p class="fc-label">Status</p>
+                <p class="fc-value">Open to work</p>
+              </div>
+            </div>
+
+            <div class="float-card float-card--loc">
+              <span class="fc-icon">📍</span>
+              <div>
+                <p class="fc-label">Based in</p>
+                <p class="fc-value">Philippines 🇵🇭</p>
+              </div>
+            </div>
+
+            <div class="float-card float-card--exp">
+              <span class="fc-icon">⚡</span>
+              <div>
+                <p class="fc-label">Experience</p>
+                <p class="fc-value">Full-Stack Dev</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- GitHub Contribution Calendar -->
+        <div class="gh-calendar reveal" data-reveal="up" data-delay="200">
+          <div class="gh-calendar-header">
+            <span class="gh-calendar-title">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              GitHub Activity
+            </span>
+            <a href="https://github.com/Juuwuwmyr" target="_blank" rel="noopener" class="gh-profile-link">
+              @Juuwuwmyr <span>↗</span>
+            </a>
+          </div>
+          <div class="gh-calendar-wrap">
+            <div class="gh-cal-meta">
+              <span class="gh-cal-count" id="ghContribCount">Loading…</span>
+              <span class="gh-cal-meta-label">contributions in the last year</span>
+            </div>
+            <div class="gh-cal-scroll">
+              <div class="gh-cal-months" id="ghMonths"></div>
+              <div class="gh-cal-body">
+                <div class="gh-cal-days">
+                  <span></span>
+                  <span>Mon</span>
+                  <span></span>
+                  <span>Wed</span>
+                  <span></span>
+                  <span>Fri</span>
+                  <span></span>
+                </div>
+                <div class="gh-cal-grid" id="ghGrid"></div>
+              </div>
+            </div>
+            <div class="gh-cal-legend">
+              <span>Less</span>
+              <span class="gh-cell gh-l0"></span>
+              <span class="gh-cell gh-l1"></span>
+              <span class="gh-cell gh-l2"></span>
+              <span class="gh-cell gh-l3"></span>
+              <span class="gh-cell gh-l4"></span>
+              <span>More</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SKILLS TICKER -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>HTML5</span><span class="sep">·</span>
+        <span>CSS3</span><span class="sep">·</span>
+        <span>JavaScript</span><span class="sep">·</span>
+        <span>React</span><span class="sep">·</span>
+        <span>C#</span><span class="sep">·</span>
+        <span>Python</span><span class="sep">·</span>
+        <span>Java</span><span class="sep">·</span>
+        <span>PHP</span><span class="sep">·</span>
+        <span>MySQL</span><span class="sep">·</span>
+        <span>MongoDB</span><span class="sep">·</span>
+        <span>SQLite</span><span class="sep">·</span>
+        <span>AWS</span><span class="sep">·</span>
+        <span>EC2</span><span class="sep">·</span>
+        <span>Git &amp; GitHub</span><span class="sep">·</span>
+        <span>HTML5</span><span class="sep">·</span>
+        <span>CSS3</span><span class="sep">·</span>
+        <span>JavaScript</span><span class="sep">·</span>
+        <span>React</span><span class="sep">·</span>
+        <span>C#</span><span class="sep">·</span>
+        <span>Python</span><span class="sep">·</span>
+        <span>Java</span><span class="sep">·</span>
+        <span>PHP</span><span class="sep">·</span>
+        <span>MySQL</span><span class="sep">·</span>
+        <span>MongoDB</span><span class="sep">·</span>
+        <span>SQLite</span><span class="sep">·</span>
+        <span>AWS</span><span class="sep">·</span>
+        <span>EC2</span><span class="sep">·</span>
+        <span>Git &amp; GitHub</span><span class="sep">·</span>
+      </div>
+    </div>
+
+    <hr class="section-divider" aria-hidden="true">
+
+    <!-- ABOUT -->
+    <section class="about section" id="about">
+      <div class="container">
+        <div class="section-kicker reveal" data-reveal="up">
+          <span>About me</span>
+        </div>
+
+        <div class="about-layout">
+          <div class="about-headline">
+            <h2 class="reveal" data-reveal="right">
+              Crafting web<br>
+              <span class="sec-title-muted"></span>experiences that actually work.</span>
+            </h2>
+          </div>
+
+          <div class="about-body">
+            <p class="reveal" data-reveal="up" data-delay="100">
+              I'm a full-stack developer based in the Philippines. I work across
+              the whole stack — React and vanilla JavaScript on the frontend,
+              C#, Python, Java and PHP on the backend, with MySQL, MongoDB and
+              SQLite for data, deployed on AWS EC2.
+            </p>
+            <p class="reveal" data-reveal="up" data-delay="200">
+              I care about the details — spacing, performance, accessibility —
+              the things that separate a good product from a great one. I enjoy
+              working directly with people to solve real problems, and I'm always
+              looking for projects that push me to learn something new.
+            </p>
+
+            <dl class="about-list reveal" data-reveal="up" data-delay="300">
+              <div><dt>Focus</dt><dd>Full-Stack Development</dd></div>
+              <div><dt>Location</dt><dd>Philippines 🇵🇭</dd></div>
+              <div><dt>Experience</dt><dd>2+ Years</dd></div>
+              <div><dt>Status</dt><dd class="open">Open to work</dd></div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider" aria-hidden="true">
+
+    <!-- SERVICES -->
+    <section class="services section" id="work">
+      <div class="container">
+        <div class="section-kicker reveal" data-reveal="up"><span>Services</span></div>
+        <h2 class="sec-title reveal" data-reveal="up" data-delay="100">What I bring<br><span class="sec-title-muted">to the table.</span></h2>
+
+        <div class="svc-grid">
+          <div class="svc-card reveal" data-reveal="zoom">
+            <div class="svc-num">01</div>
+            <h3>Full-Stack Development</h3>
+            <p>End-to-end apps with React frontends and C#, Python, Java, or PHP backends — built to scale.</p>
+          </div>
+          <div class="svc-card reveal" data-reveal="zoom">
+            <div class="svc-num">02</div>
+            <h3>Responsive Design</h3>
+            <p>Every layout works beautifully on any screen — mobile-first, fluid, and pixel-tested.</p>
+          </div>
+          <div class="svc-card reveal" data-reveal="zoom">
+            <div class="svc-num">03</div>
+            <h3>Database Design</h3>
+            <p>Relational and NoSQL — MySQL, SQLite, and MongoDB schemas that stay fast as data grows.</p>
+          </div>
+          <div class="svc-card reveal" data-reveal="zoom">
+            <div class="svc-num">04</div>
+            <h3>Cloud &amp; Deployment</h3>
+            <p>AWS EC2 setups, CI pipelines, and production deployments with monitoring baked in.</p>
+          </div>
+          <div class="svc-card reveal" data-reveal="zoom">
+            <div class="svc-num">05</div>
+            <h3>Performance</h3>
+            <p>Lean markup, deferred scripts, and optimised assets — pages that feel instant.</p>
+          </div>
+          <div class="svc-card reveal" data-reveal="zoom">
+            <div class="svc-num">06</div>
+            <h3>UI / UX Polish</h3>
+            <p>Thoughtful interactions, clear hierarchy, and the small details that make people feel at home.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider" aria-hidden="true">
+
+    <!-- STACK -->
+    <!-- STACK -->
+    <section class="stack section" id="stack">
+      <div class="container">
+        <div class="section-kicker reveal" data-reveal="up"><span>Tech Stack</span></div>
+        <h2 class="sec-title reveal" data-reveal="up" data-delay="100">Tools I use to<br><span class="sec-title-muted">ship great products.</span></h2>
+
+        <div class="stack-rows">
+
+          <div class="stack-row-item reveal" data-reveal="up" data-delay="100">
+            <div class="stack-row-label">
+              <h3>Frontend</h3>
+              <span>4 tools</span>
+            </div>
+            <div class="stack-pills">
+              <div class="stack-pill"><i class="devicon-javascript-plain colored"></i>JavaScript</div>
+              <div class="stack-pill"><i class="devicon-react-original colored"></i>React</div>
+              <div class="stack-pill"><i class="devicon-html5-plain colored"></i>HTML5</div>
+              <div class="stack-pill"><i class="devicon-css3-plain colored"></i>CSS3</div>
+            </div>
+          </div>
+
+          <div class="stack-row-item reveal" data-reveal="up" data-delay="200">
+            <div class="stack-row-label">
+              <h3>Backend</h3>
+              <span>4 tools</span>
+            </div>
+            <div class="stack-pills">
+              <div class="stack-pill"><i class="devicon-csharp-plain colored"></i>C#</div>
+              <div class="stack-pill"><i class="devicon-python-plain colored"></i>Python</div>
+              <div class="stack-pill"><i class="devicon-java-plain colored"></i>Java</div>
+              <div class="stack-pill"><i class="devicon-php-plain colored"></i>PHP</div>
+            </div>
+          </div>
+
+          <div class="stack-row-item reveal" data-reveal="up" data-delay="300">
+            <div class="stack-row-label">
+              <h3>Database</h3>
+              <span>3 tools</span>
+            </div>
+            <div class="stack-pills">
+              <div class="stack-pill"><i class="devicon-mysql-plain colored"></i>MySQL</div>
+              <div class="stack-pill"><i class="devicon-mongodb-plain colored"></i>MongoDB</div>
+              <div class="stack-pill"><i class="devicon-sqlite-plain colored"></i>SQLite</div>
+            </div>
+          </div>
+
+          <div class="stack-row-item reveal" data-reveal="up" data-delay="400">
+            <div class="stack-row-label">
+              <h3>Tools &amp; Cloud</h3>
+              <span>5 tools</span>
+            </div>
+            <div class="stack-pills">
+              <div class="stack-pill"><i class="devicon-git-plain colored"></i>Git</div>
+              <div class="stack-pill"><i class="devicon-github-original colored"></i>GitHub</div>
+              <div class="stack-pill"><i class="devicon-docker-plain colored"></i>Docker</div>
+              <div class="stack-pill"><i class="devicon-amazonwebservices-plain-wordmark colored"></i>AWS EC2</div>
+              <div class="stack-pill"><i class="devicon-vscode-plain colored"></i>VS Code</div>
+            </div>
+          </div>
+
+        </div>
+
+
+      </div>
+    </section>
+    </section>
+
+    <hr class="section-divider" aria-hidden="true">
+
+    <!-- PROJECTS -->
+    <section class="projects section" id="projects">
+      <div class="container">
+        <div class="section-kicker reveal" data-reveal="up"><span>Projects</span></div>
+        <h2 class="sec-title reveal" data-reveal="up" data-delay="100">Selected work.<br><span class="sec-title-muted">things I've built.</span></h2>
+
+        <div class="proj-grid">
+
+          <!-- 01 -->
+          <article class="proj-card reveal" data-reveal="up" data-delay="0">
+            <div class="proj-card-thumb no-img">
+              <img src="assets/proj1.jpg" alt="EOSAS" onerror="this.style.display='none'"/>
+              <div class="proj-card-thumb-placeholder">
+                <div class="ph-browser">
+                  <div class="ph-bar"><span class="ph-dot"></span><span class="ph-dot"></span><span class="ph-dot"></span><span class="ph-url"></span></div>
+                  <div class="ph-content"><div class="ph-line"></div><div class="ph-line"></div><div class="ph-line"></div></div>
+                </div>
+                <span class="ph-label">EOSAS</span>
+              </div>
+            </div>
+            <div class="proj-card-body">
+              <div class="proj-card-tags">
+                <span class="proj-tag">Management System</span>
+                <span class="proj-tag">Education</span>
+              </div>
+              <h3>EOSAS</h3>
+              <p>Student Entrance Slip Management System for Colegio De Naujan.</p>
+              <div class="proj-card-meta">
+                <span class="proj-collab">🤝 w/ Patrick James Romasanta</span>
+              </div>
+              <div class="proj-card-stack">
+                <span>PHP</span><span>MySQL</span><span>JavaScript</span>
+              </div>
+              <div class="proj-card-actions">
+                <a href="#" class="proj-btn proj-btn--primary">View <span>↗</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 02 -->
+          <article class="proj-card reveal" data-reveal="up" data-delay="100">
+            <div class="proj-card-thumb no-img">
+              <img src="assets/proj2.jpg" alt="EUT Delivery App" onerror="this.style.display='none'"/>
+              <div class="proj-card-thumb-placeholder">
+                <div class="ph-browser">
+                  <div class="ph-bar"><span class="ph-dot"></span><span class="ph-dot"></span><span class="ph-dot"></span><span class="ph-url"></span></div>
+                  <div class="ph-content"><div class="ph-line"></div><div class="ph-line"></div><div class="ph-line"></div></div>
+                </div>
+                <span class="ph-label">EUT Delivery</span>
+              </div>
+            </div>
+            <div class="proj-card-body">
+              <div class="proj-card-tags">
+                <span class="proj-tag">E-Commerce</span>
+                <span class="proj-tag">Food Delivery</span>
+              </div>
+              <h3>EUT Delivery App</h3>
+              <p>E-commerce delivery app for EUT Restaurant in Naujan.</p>
+              <div class="proj-card-stack">
+                <span>React</span><span>Node.js</span><span>MongoDB</span>
+              </div>
+              <div class="proj-card-actions">
+                <a href="#" class="proj-btn proj-btn--primary">View <span>↗</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 03 -->
+          <article class="proj-card reveal" data-reveal="up" data-delay="200">
+            <div class="proj-card-thumb no-img">
+              <img src="assets/proj3.jpg" alt="FitGym Booking" onerror="this.style.display='none'"/>
+              <div class="proj-card-thumb-placeholder">
+                <div class="ph-browser">
+                  <div class="ph-bar"><span class="ph-dot"></span><span class="ph-dot"></span><span class="ph-dot"></span><span class="ph-url"></span></div>
+                  <div class="ph-content"><div class="ph-line"></div><div class="ph-line"></div><div class="ph-line"></div></div>
+                </div>
+                <span class="ph-label">FitGym</span>
+              </div>
+            </div>
+            <div class="proj-card-body">
+              <div class="proj-card-tags">
+                <span class="proj-tag">Booking System</span>
+                <span class="proj-tag">Fitness</span>
+              </div>
+              <h3>FitGym Booking System</h3>
+              <p>Online gym session booking and membership management system.</p>
+              <div class="proj-card-meta">
+                <span class="proj-collab">🤝 w/ Patrick James Romasanta</span>
+              </div>
+              <div class="proj-card-stack">
+                <span>PHP</span><span>MySQL</span><span>Bootstrap</span>
+              </div>
+              <div class="proj-card-actions">
+                <a href="#" class="proj-btn proj-btn--primary">View <span>↗</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 04 -->
+          <article class="proj-card reveal" data-reveal="up" data-delay="0">
+            <div class="proj-card-thumb no-img">
+              <img src="assets/proj4.jpg" alt="EComlab Attendance" onerror="this.style.display='none'"/>
+              <div class="proj-card-thumb-placeholder">
+                <div class="ph-browser">
+                  <div class="ph-bar"><span class="ph-dot"></span><span class="ph-dot"></span><span class="ph-dot"></span><span class="ph-url"></span></div>
+                  <div class="ph-content"><div class="ph-line"></div><div class="ph-line"></div><div class="ph-line"></div></div>
+                </div>
+                <span class="ph-label">EComlab</span>
+              </div>
+            </div>
+            <div class="proj-card-body">
+              <div class="proj-card-tags">
+                <span class="proj-tag">Attendance</span>
+                <span class="proj-tag">Lab System</span>
+              </div>
+              <h3>EComlab Attendance</h3>
+              <p>Computer lab attendance tracking system using PC login detection.</p>
+              <div class="proj-card-stack">
+                <span>C#</span><span>MySQL</span><span>WinForms</span>
+              </div>
+              <div class="proj-card-actions">
+                <a href="#" class="proj-btn proj-btn--primary">View <span>↗</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 05 -->
+          <article class="proj-card reveal" data-reveal="up" data-delay="100">
+            <div class="proj-card-thumb no-img">
+              <img src="assets/proj5.jpg" alt="UtangMate" onerror="this.style.display='none'"/>
+              <div class="proj-card-thumb-placeholder">
+                <div class="ph-browser">
+                  <div class="ph-bar"><span class="ph-dot"></span><span class="ph-dot"></span><span class="ph-dot"></span><span class="ph-url"></span></div>
+                  <div class="ph-content"><div class="ph-line"></div><div class="ph-line"></div><div class="ph-line"></div></div>
+                </div>
+                <span class="ph-label">UtangMate</span>
+              </div>
+            </div>
+            <div class="proj-card-body">
+              <div class="proj-card-tags">
+                <span class="proj-tag">Personal Project</span>
+                <span class="proj-tag">Finance</span>
+              </div>
+              <h3>UtangMate</h3>
+              <p>Personal debt tracker app — log who owes you and how much, with reminders.</p>
+              <div class="proj-card-stack">
+                <span>JavaScript</span><span>SQLite</span>
+              </div>
+              <div class="proj-card-actions">
+                <a href="#" class="proj-btn proj-btn--primary">View <span>↗</span></a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider" aria-hidden="true">
+
+    <!-- CONTACT -->
+    <section class="contact section" id="contact">
+      <div class="container">
+        <div class="cta-box reveal" data-reveal="zoom">
+          <div class="cta-left">
+            <p class="section-kicker-inv"><span>Contact</span></p>
+            <h2 class="cta-title">
+              Have a project in mind?<br>
+              <span class="sec-title-muted">Let's talk.</span>
+            </h2>
+          </div>
+          <div class="cta-right">
+            <p class="cta-body">
+              I'm open to freelance projects and full-time opportunities.
+              Send me a message and I'll reply within a day.
+            </p>
+            <a href="mailto:morenojumyr0@gmail.com" class="cta-email">
+              morenojumyr0@gmail.com
+              <span class="cta-arrow">↗</span>
+            </a>
+            <div class="cta-socials">
+              <a href="https://github.com/Juuwuwmyr" target="_blank" rel="noopener">GitHub <span>↗</span></a>
+              <a href="https://www.facebook.com/moreno.jum" target="_blank" rel="noopener">Facebook <span>↗</span></a>
+              <a href="#">LinkedIn <span>↗</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+
+      <div class="ft-top">
+        <div class="ft-brand">
+          <span class="ft-logo">Jumyr<span class="logo-dot">.</span></span>
+          <span class="ft-name">Jumyr M Moreno</span>
+        </div>
+        <a href="#hero" class="ft-top-btn" id="backTop">Back to top ↑</a>
+      </div>
+
+      <div class="ft-cols">
+        <div class="ft-col">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#work">Services</a></li>
+            <li><a href="#stack">Stack</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="ft-col">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="https://github.com/Juuwuwmyr" target="_blank" rel="noopener">GitHub <span class="ext">↗</span></a></li>
+            <li><a href="https://www.facebook.com/moreno.jum" target="_blank" rel="noopener">Facebook <span class="ext">↗</span></a></li>
+            <li><a href="#">LinkedIn <span class="ext">↗</span></a></li>
+          </ul>
+        </div>
+        <div class="ft-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:morenojumyr0@gmail.com">morenojumyr0@gmail.com</a></li>
+          </ul>
+          <p class="ft-location">Based in Philippines 🇵🇭<br>Open to remote work</p>
+        </div>
+        <div class="ft-col">
+          <h4>Status</h4>
+          <p class="ft-status"><span class="ft-dot"></span>Available for freelance</p>
+          <p class="ft-sub">and full-time roles</p>
+        </div>
+      </div>
+
+      <div class="ft-bottom">
+        <p>© <span id="year"></span> Jumyr M Moreno. All rights reserved.</p>
+      </div>
+
+    </div>
+  </footer>
+  </div><!-- /.page-wrap -->
+
+  <script src="script.js"></script>
+</body>
+</html>
